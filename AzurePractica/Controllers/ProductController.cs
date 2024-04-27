@@ -14,7 +14,7 @@ namespace AzurePractica.Controllers
             _context = context;
         }
 
-        public IActionResult Index(Guid? productId)
+        public IActionResult Index(int? productId)
         {
             var products = _context.Products.ToList();
 
@@ -27,7 +27,7 @@ namespace AzurePractica.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetCategory()
+        public IActionResult GetAll()
         {
             var products = _context.Products.ToList();
             return View(products);
